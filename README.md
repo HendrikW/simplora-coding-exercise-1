@@ -15,9 +15,14 @@ It should inform a tech-savvy user about where to expect the moon to be position
 In particular, it should display an image of the moon's position on the sky in Munich computed by the Wolfram Alpha "computational knowledge engine". 
 It should also inform the user with which HTTP status the bit.ly service responded to redirect the requesting agent to the Wolfram alpha service. 
  
-## Tasks
+## Tasks              
+
+### Database
 
 * configure the database to use the credentials provided via email in form of a full URL
+* create the table for delayed_job and migrate the database according to the installation section at https://github.com/collectiveidea/delayed_job
+ 
+### Further(TODO)
 * use the mechanize gem for all HTTP requests
 * access http://bit.ly/1lsOadd in order to retrieve the correct api request 
 * append the required appid parameter to the request (the appid key was provided to you via email) from an environment variable (so that `APPID=XYZ rake jobs:work` runs the correct request)
