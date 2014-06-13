@@ -1,0 +1,13 @@
+development: &development
+  adapter: postgresql
+  encoding: unicode
+  database: # TODO
+  pool: 5
+  username: # TODO
+  password: # TODO
+  host:     # TODO
+  port: 5432
+
+# use dev db also in production environment
+production:
+  <<: *development
