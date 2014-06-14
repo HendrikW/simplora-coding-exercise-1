@@ -1,17 +1,26 @@
 class MoonPathController < ApplicationController
-  respond_with :json
 
-  def view
+  def show
 
-    begin
+    render 'moon_path/show'
 
-      MoonPath.delay.fetch # TODO run `rake jobs:work` to execute delayed methods
+  end
 
-      head :no_content
+  def fetch
 
-    rescue StandardError => e
+    respond_to do |format|
 
-      head :internal_server_error
+      begin
+
+        MoonPath.delay.fetch # TODO run `rake jobs:work` to execute delayed methods
+
+        format.json { head :no_content }
+
+      rescue StandardError => e
+
+        format.json { head :internal_server_error }
+      end
+
     end
 
   end

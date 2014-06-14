@@ -1,0 +1,8 @@
+<script type="text/javascript">
+    $(function () {
+        $.get('moon_path/fetch', function(data) {
+            $('#moon_path_display').append(data)
+        })
+    });
+</script>
+<div id="moon_path_display"></div>
