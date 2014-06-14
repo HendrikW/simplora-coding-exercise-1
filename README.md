@@ -13,7 +13,11 @@ The application will be run from the default WebRick web server.
 It should inform a tech-savvy user about where to expect the moon to be positioned at night on a cloud-free Munich sky and also show some status information.
 
 In particular, it should display an image of the moon's position on the sky in Munich computed by the Wolfram Alpha "computational knowledge engine". 
-It should also inform the user with which HTTP status the bit.ly service responded to redirect the requesting agent to the Wolfram alpha service. 
+It should also inform the user with which HTTP status the bit.ly service responded to redirect the requesting agent to the Wolfram alpha service.
+ 
+Here an image of how our internal 'reference implementation' chooses to display the information to the user:
+ 
+<img src="coding-test-1.png" alt="moon position information application user display" />
  
 ## Tasks     
          
