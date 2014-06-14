@@ -11,7 +11,9 @@
         pubnub.subscribe({
             channel: channel_name,
             callback: function (message) {
-                $('#moon_path_display').append(message);
+                moon_path = $.parseJSON(message)
+                $('#moon_path_display').append("<div>REDIRECTION STATUS: " + moon_path.redirection_status_code + "</div>");
+                $('#moon_path_display').append("<div>IMAGE: <img src=" + moon_path.image_url + " /> </div>");
                 pubnub.unsubscribe({ channel : channel_name });
             }
         });
