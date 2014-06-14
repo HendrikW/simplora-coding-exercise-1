@@ -35,8 +35,8 @@ Here an image of how our internal 'reference implementation' chooses to display 
 * perform all interactions with external services from inside a separate background process via queued jobs with the help of the delayed_job library 
 * use the mechanize gem for all HTTP requests
 * access http://bit.ly/1lsOadd in order to retrieve the correct api request 
-* append the required appid parameter to the request (the appid key was provided to you via email) from an environment variable (so that `APPID=XYZ rake jobs:work` runs the correct request)
-* display the image from the "MoonPathFromLocation" <pod>-tag to the user 
+* append the required  `appid` parameter to the request (the `appid` key was provided to you via email) from an environment variable (so that `APPID=XYZ rake jobs:work` runs the correct request)
+* display the image from the "MoonPathFromLocation" `<pod>`-tag to the user 
 * also display the status code from the HTTP redirection that bit.ly performs to the user
 
 ### Client
@@ -46,7 +46,7 @@ Here an image of how our internal 'reference implementation' chooses to display 
  
 ### Other
 
-* bonus task: if you get to it, change the setup so that the mechanize library code is no longer loaded in the rails application's process  
+* bonus task: if you get to it, change the setup so that the mechanize library code is no longer loaded in the rails application process  
 
 * please write a short sentence explaining why one would use a gem like mechanize instead of simply performing HTTP requests via NetHTTP or a similar HTTP library
 * please also write a sentence explaining why we execute the API call(s) from a separate process and not the web server's process.
