@@ -42,6 +42,7 @@ GEM
     domain_name (0.5.18)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.2.0)
     hike (1.2.3)
     http-cookie (1.0.2)
@@ -77,6 +78,10 @@ GEM
     ntlm-http (0.1.1)
     pg (0.15.1)
     polyglot (0.3.5)
+    pubnub (3.5.5)
+      eventmachine
+      json
+      net-http-persistent
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -141,6 +146,7 @@ DEPENDENCIES
   jquery-rails
   mechanize
   pg
+  pubnub
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc

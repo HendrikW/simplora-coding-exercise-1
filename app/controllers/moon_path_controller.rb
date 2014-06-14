@@ -8,11 +8,13 @@ class MoonPathController < ApplicationController
 
   def fetch
 
+    channel_name = params[:channel_name]
+
     respond_to do |format|
 
       begin
 
-        MoonPath.delay.fetch # TODO run `rake jobs:work` to execute delayed methods
+        MoonPath.delay.fetch(channel_name) # TODO run `rake jobs:work` to execute delayed methods
 
         format.json { head :no_content }
 

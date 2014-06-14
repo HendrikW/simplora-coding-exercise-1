@@ -1,8 +1,22 @@
+<script type="text/javascript" src="http://cdn.pubnub.com/pubnub.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $.get('moon_path/fetch', function(data) {
-            $('#moon_path_display').append(data)
-        })
+
+        var channel_name = ''; // TODO choose some channel name
+
+        var pubnub = PUBNUB.init({
+            subscribe_key: 'sub-c-e9d4fbc6-f2fb-11e3-854f-02ee2ddab7fe'
+        });
+
+        pubnub.subscribe({
+            channel: channel_name,
+            callback: function (message) {
+                $('#moon_path_display').append(message);
+                pubnub.unsubscribe({ channel : channel_name });
+            }
+        });
+
+        $.get('<%= "#{fetch_moon_path_url}" %>', function(){});
     });
 </script>
 <div id="moon_path_display"></div>

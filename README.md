@@ -37,7 +37,7 @@ It should also inform the user with which HTTP status the bit.ly service respond
 
 ### Client
  
-* use the credentials for the pubnub service provided to you in the email to send the resulting MoonPath model to the client in JSON format  
+* use the pubnub service with the hard-coded credentials to send the resulting MoonPath model to the client in JSON format  
 * in the client show the retrieved information to the user  
  
 ### Other
